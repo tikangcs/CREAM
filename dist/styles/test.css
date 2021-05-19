@@ -19,7 +19,10 @@ body {
   color: #fdfdff;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "VarelaRound";
   color: #fdfdff;
 }
@@ -36,7 +39,7 @@ h1, h2, h3, h4 {
   height: 3rem;
   font-size: 30px;
   margin: 0 1rem;
-  color: #4967A9;
+  color: #4967a9;
 }
 
 .facebook:hover {
@@ -48,7 +51,7 @@ h1, h2, h3, h4 {
   height: 3rem;
   font-size: 30px;
   margin: 0 1rem;
-  color: #03A1F2;
+  color: #03a1f2;
 }
 
 .twitter:hover {
@@ -60,7 +63,7 @@ h1, h2, h3, h4 {
   height: 3rem;
   font-size: 30px;
   margin: 0 1rem;
-  color: #DF1A25;
+  color: #df1a25;
 }
 
 .pinterest:hover {
@@ -68,7 +71,12 @@ h1, h2, h3, h4 {
   opacity: 80%;
 }
 
-p, h1, h2, h3, h4, h5 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   padding: 0;
 }
@@ -146,12 +154,12 @@ p, h1, h2, h3, h4, h5 {
   position: relative;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
   margin: 0;
 }
 
-input[type=checkbox]:checked {
+input[type="checkbox"]:checked {
   position: relative;
   margin: 0;
   right: 1rem;
@@ -233,7 +241,7 @@ input[type=checkbox]:checked {
   opacity: 80%;
   transform: translateY(-5px);
   border-bottom: 5px #414040 solid;
-  color: #0275FE;
+  color: #0275fe;
 }
 
 .add-to-bag {
@@ -340,7 +348,8 @@ input[type=checkbox]:checked {
   margin-left: 2rem;
 }
 
-.overview-body-interaction h2, p {
+.overview-body-interaction h2,
+p {
   margin-bottom: 0.5rem;
 }
 
@@ -370,7 +379,7 @@ input[type=checkbox]:checked {
 .read-all-scroll:hover {
   cursor: pointer;
   opacity: 80%;
-  color: #487DB8;
+  color: #487db8;
 }
 
 .current-stars {
@@ -439,7 +448,8 @@ input[type=checkbox]:checked {
   margin-bottom: 2%;
 }
 
-.related-products-title, .outfits-title {
+.related-products-title,
+.outfits-title {
   margin: 0px;
   font-size: 1.5vw;
 }
@@ -509,7 +519,8 @@ input[type=checkbox]:checked {
   font-size: 1.2vw;
 }
 
-.product-category, .product-price {
+.product-category,
+.product-price {
   margin-top: 10px;
   font-size: 1.1vw;
 }
@@ -537,18 +548,25 @@ input[type=checkbox]:checked {
   margin-bottom: 6px;
 }
 
-.fa-star, .comparison-modal, .outfits-x {
+.fa-star,
+.comparison-modal,
+.outfits-x {
   position: absolute;
   top: 2%;
   right: 3%;
   color: white;
 }
 
-.compare-product-button:hover, .modal-close:hover {
+.compare-product-button:hover,
+.modal-close:hover {
   font-size: 125%;
 }
 
-.comparison-modal, .outfits-x, #outfits-add, .carousel-chevron, .modal-close {
+.comparison-modal,
+.outfits-x,
+#outfits-add,
+.carousel-chevron,
+.modal-close {
   border: none;
   color: none;
   background: transparent;
@@ -577,7 +595,8 @@ input[type=checkbox]:checked {
   padding-bottom: 15px;
 }
 
-tr td, tr th {
+tr td,
+tr th {
   text-align: center;
   font-size: 15px;
   padding: 10px;
@@ -633,7 +652,7 @@ tr th {
 
 .review-tile {
   padding: 0 10px 0 10px;
-  border: solid #7B9EB3 2px;
+  border: solid #7b9eb3 2px;
   background-color: #fffffd;
   border-radius: 10px;
   margin-bottom: 1px;
@@ -768,7 +787,7 @@ tr th {
   position: absolute;
   height: 10px;
   bottom: 0;
-  background-color: #487DB8;
+  background-color: #487db8;
 }
 
 .review-characteristic {

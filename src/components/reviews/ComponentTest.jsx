@@ -1,31 +1,25 @@
-import React from 'react';
-import Stars from '../shared/Stars.jsx'
+import React from "react";
+import Stars from "../shared/Stars.jsx";
 
 class ComponentTest extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
-
-
-
-
-
-
   render() {
     return (
-      <div >
-        <div id = 'outer' >hello</div>
-          <div id = 'overlay'>
-                  <form id = 'text'>
-                      <input type = 'text'></input>
-                  </form>
-          </div>
+      <div>
+        <div id="outer">hello</div>
+        <div id="overlay">
+          <form id="text">
+            <input type="text"></input>
+          </form>
+        </div>
 
-          <Stars total = '3.6' />
+        <Stars total="3.6" />
       </div>
     );
   }
 }
 
-export default ComponentTest
+export default ComponentTest;

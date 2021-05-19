@@ -1,7 +1,5 @@
-import React from 'react';
+import React from "react";
 
-const Accordion = () => {
-
-}
+const Accordion = () => {};
 
 export default Accordion;

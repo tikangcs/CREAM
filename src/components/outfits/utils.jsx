@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 const getFeatures = (product, currentProduct) => {
   const features = new Set();
   for (let item of product) {
@@ -39,7 +39,7 @@ const getFeatures = (product, currentProduct) => {
     }
     result.push(obj);
   }
- return result;
-}
+  return result;
+};
 
 export default getFeatures;

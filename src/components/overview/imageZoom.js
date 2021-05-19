@@ -1,16 +1,16 @@
-
-var imageZoom = function(imgID, zoom) {
+var imageZoom = function (imgID, zoom) {
   var img, glass, w, h, bw;
 
   var img = document.getElementById(imgID);
-  var containerDiv = document.getElementById('overview-body-image');
+  var containerDiv = document.getElementById("overview-body-image");
   glass = document.createElement("DIV");
 
   glass.setAttribute("id", "img-magnifier-glass");
   img.parentElement.insertBefore(glass, img);
   glass.style.backgroundImage = "url('" + img.src + "')";
   glass.style.backgroundRepeat = "no-repeat";
-  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  glass.style.backgroundSize =
+    img.width * zoom + "px " + img.height * zoom + "px";
   bw = 2;
   w = glass.offsetWidth / 2;
   h = glass.offsetHeight / 2;
@@ -26,21 +26,31 @@ var imageZoom = function(imgID, zoom) {
     x = pos.x;
     y = pos.y;
 
-    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
-    if (x < w / zoom) {x = w / zoom;}
-    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
-    if (y < h / zoom) {y = h / zoom;}
+    if (x > img.width - w / zoom) {
+      x = img.width - w / zoom;
+    }
+    if (x < w / zoom) {
+      x = w / zoom;
+    }
+    if (y > img.height - h / zoom) {
+      y = img.height - h / zoom;
+    }
+    if (y < h / zoom) {
+      y = h / zoom;
+    }
 
-    glass.style.left = (x - w) + "px";
-    glass.style.top = (y - h) + "px";
-    glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw)  + "px -" + (((y * zoom) - h + bw) ) + "px";
+    glass.style.left = x - w + "px";
+    glass.style.top = y - h + "px";
+    glass.style.backgroundSize =
+      img.width * zoom + "px " + img.height * zoom + "px";
+    glass.style.backgroundPosition =
+      "-" + (x * zoom - w + bw) + "px -" + (y * zoom - h + bw) + "px";
   }
 
-
-
   function getCursorPos(e) {
-    var a, x = 0, y = 0;
+    var a,
+      x = 0,
+      y = 0;
     e = e || window.event;
 
     a = img.getBoundingClientRect();
@@ -50,7 +60,7 @@ var imageZoom = function(imgID, zoom) {
 
     x = x - window.pageXOffset;
     y = y - window.pageYOffset;
-    return {x : x, y : y};
+    return { x: x, y: y };
   }
-}
+};
 export default imageZoom;

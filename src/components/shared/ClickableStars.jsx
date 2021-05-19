@@ -1,12 +1,11 @@
-import React from 'react';
-import Star from './Star.jsx'
-
+import React from "react";
+import Star from "./Star.jsx";
 
 //stars is always going to expect a prop of total (which is the total score of whatever thing you are measuring (i.e. props.total = 3.4))
 
-class ClickableStars extends React.Component{
+class ClickableStars extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       total: 0,
       ratings: {
@@ -15,48 +14,65 @@ class ClickableStars extends React.Component{
         3: '3 stars - "Average"',
         4: '4 stars - "Good"',
         5: '5 stars - "Great"',
-      }
-    }
+      },
+    };
     this.handleStarClick = this.handleStarClick.bind(this);
   }
 
   handleStarClick(event) {
-    this.setState({total: event});
-    console.log(this)
-    this.props.rating(event)
+    this.setState({ total: event });
+    console.log(this);
+    this.props.rating(event);
   }
 
-  render(){
-
+  render() {
     return (
-      <div className = 'clickable-stars' id = {this.props.id}>
-        <div className = 'stars' >
-          <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {1}/>
+      <div className="clickable-stars" id={this.props.id}>
+        <div className="stars">
+          <div className="star">
+            <Star
+              total={this.state.total}
+              onClick={this.handleStarClick}
+              value={1}
+            />
           </div>
 
-
-          <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {2} />
+          <div className="star">
+            <Star
+              total={this.state.total}
+              onClick={this.handleStarClick}
+              value={2}
+            />
           </div>
 
-          <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {3} />
+          <div className="star">
+            <Star
+              total={this.state.total}
+              onClick={this.handleStarClick}
+              value={3}
+            />
           </div>
 
-          <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {4} />
+          <div className="star">
+            <Star
+              total={this.state.total}
+              onClick={this.handleStarClick}
+              value={4}
+            />
           </div>
 
-          <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {5} />
+          <div className="star">
+            <Star
+              total={this.state.total}
+              onClick={this.handleStarClick}
+              value={5}
+            />
           </div>
         </div>
         <p>{this.state.ratings[this.state.total]}</p>
       </div>
-   )
+    );
   }
 }
 
 export default ClickableStars;
-

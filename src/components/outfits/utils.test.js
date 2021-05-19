@@ -1,25 +1,25 @@
-const getFeatures = require('./utils.jsx').default;
+const getFeatures = require("./utils.jsx").default;
 
-const sampleProduct = require('../../../sample-data/products/get-productId.json').features;
-const currentProduct = require('../../../sample-data/products/get-productId.json').features;
+const sampleProduct =
+  require("../../../sample-data/products/get-productId.json").features;
+const currentProduct =
+  require("../../../sample-data/products/get-productId.json").features;
 
-describe('getFeatures', () => {
-
-  it('should render the correct result', () => {
+describe("getFeatures", () => {
+  it("should render the correct result", () => {
     let actualResult = getFeatures(sampleProduct, currentProduct);
     let expectedResult = [
       {
-        "currentProduct": "Canvas",
-        "feature": "Fabric",
-        "product": "Canvas",
+        currentProduct: "Canvas",
+        feature: "Fabric",
+        product: "Canvas",
       },
       {
-        "currentProduct": "Brass",
-        "feature": "Buttons",
-        "product": "Brass",
+        currentProduct: "Brass",
+        feature: "Buttons",
+        product: "Brass",
       },
-    ]
+    ];
     expect(actualResult).toEqual(expectedResult);
   });
-
 });

@@ -1,12 +1,11 @@
-import Redux from 'redux';
+import Redux from "redux";
 
-var setGalleryIndexReducer = (state=0, action) => {
-  if (action.type === 'SET_GALLERY_INDEX') {
-    return action.payload || 0
+var setGalleryIndexReducer = (state = 0, action) => {
+  if (action.type === "SET_GALLERY_INDEX") {
+    return action.payload || 0;
   } else {
-  return state;
+    return state;
   }
 };
-
 
 export default setGalleryIndexReducer;

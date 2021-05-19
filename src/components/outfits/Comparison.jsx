@@ -1,8 +1,8 @@
-import React from 'react';
-import getFeatures from './utils.jsx';
+import React from "react";
+import getFeatures from "./utils.jsx";
 
-const Comparison = ({product, currentProduct}) => {
-  const features = getFeatures(product.features, currentProduct.features)
+const Comparison = ({ product, currentProduct }) => {
+  const features = getFeatures(product.features, currentProduct.features);
   return (
     <React.Fragment>
       <h5 className="table-heading">Comparing</h5>
@@ -18,14 +18,16 @@ const Comparison = ({product, currentProduct}) => {
               <tr key={index}>
                 <td className="table-product">{feature.product}</td>
                 <td className="table-feature">{feature.feature}</td>
-                <td className="table-currentProduct">{feature.currentProduct}</td>
+                <td className="table-currentProduct">
+                  {feature.currentProduct}
+                </td>
               </tr>
-            )
+            );
           })}
         </tbody>
       </table>
     </React.Fragment>
   );
-}
+};
 
 export default Comparison;

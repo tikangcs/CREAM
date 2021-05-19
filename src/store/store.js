@@ -1,13 +1,13 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import rootReducer from '../reducers/rootReducer.js';
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import rootReducer from "../reducers/rootReducer.js";
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
-  whitelist: ['outfits', 'reviewHelpfulLog', 'changePage']
+  whitelist: ["outfits", "reviewHelpfulLog", "changePage"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -29,10 +29,9 @@ var initialSate = {
   outfitsCarouselIndex: 0,
   relatedCarouselIndex: 0,
   changePage: true,
-
 };
 
-export const store = createStore (
+export const store = createStore(
   persistedReducer,
   initialSate,
   applyMiddleware(thunk)

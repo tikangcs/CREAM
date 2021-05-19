@@ -1,12 +1,11 @@
-import Redux from 'redux';
+import Redux from "redux";
 
-var setQuantityReducer = (state=[], action) => {
-  if (action.type === 'SET_QUANTITY') {
-    return action.payload || []
+var setQuantityReducer = (state = [], action) => {
+  if (action.type === "SET_QUANTITY") {
+    return action.payload || [];
   } else {
-  return state;
+    return state;
   }
 };
-
 
 export default setQuantityReducer;

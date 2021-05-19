@@ -1,14 +1,11 @@
-import Redux from 'redux';
+import Redux from "redux";
 
-
-
-var fetchProductReducer = (state={}, action) => {
-  if (action.type === 'SET_PRODUCT') {
-    return action.payload
+var fetchProductReducer = (state = {}, action) => {
+  if (action.type === "SET_PRODUCT") {
+    return action.payload;
   } else {
-  return state;
+    return state;
   }
 };
-
 
 export default fetchProductReducer;

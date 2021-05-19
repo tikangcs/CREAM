@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 // both the element and the widget have to be strings!
 const logInteraction = (element, widget) => {
@@ -10,13 +10,14 @@ const logInteraction = (element, widget) => {
     time,
   };
 
-  axios.post('/interactions', data)
+  axios
+    .post("/interactions", data)
     .then(() => {
-      console.log('interaction successfully logged!');
+      console.log("interaction successfully logged!");
     })
     .catch((err) => {
       console.err(err);
     });
-}
+};
 
 export default logInteraction;
