@@ -30,8 +30,9 @@ const ReviewList = (props) => {
           </select>
         </div>
         <div className="review-tiles">
-          {props.reviews.map((element) => (
+          {props.reviews.map((element, i) => (
             <ReviewTile
+              key={i}
               helpfulLog={props.helpfulLog}
               handleHelpfulLog={props.handleHelpfulLog}
               review={element}

@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import OverviewContainer from "../containers/overview/OverviewContainer";
 import OutfitsContainer from "../containers/outfits/OutfitsContainer";
 import ReviewsContainer from "../containers/reviews/ReviewsContainer";
+import QAContainer from "../containers/qa/QAContainer";
 import SocialMediaIcons from "./overview/SocialMediaIcons.js";
 import MainPageContainer from "../containers/overview/MainPageContainer";
 
@@ -19,6 +20,7 @@ var App = ({ viewMainPage }) => {
           <OverviewContainer />
           <OutfitsContainer async />
           <ReviewsContainer />
+          <QAContainer />
         </div>
       )}
       <SocialMediaIcons />

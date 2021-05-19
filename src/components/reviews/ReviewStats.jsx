@@ -149,8 +149,9 @@ class ReviewStats extends React.Component {
             % of reviews recommend this product.
           </p>
 
-          {Object.keys(this.props.stats.characteristics).map((element) => (
+          {Object.keys(this.props.stats.characteristics).map((element, i) => (
             <ReviewCharacteristics
+              key={i}
               type={element}
               data={this.props.stats.characteristics[element]}
             />

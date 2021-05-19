@@ -16,6 +16,7 @@ import setOutfitsIndexReducer from "./outfits/setOutfitsIndexReducer";
 import setRelatedIndexReducer from "./outfits/setRelatedIndexReducer";
 import viewMainPageReducer from "./overview/viewMainPageReducer";
 import fetchReviewHelpfulLogReducer from "./reviews/fetchReviewHelpfulLogReducer";
+import setQuestionsReducer from "./qa/setQuestionsReducer";
 
 var rootReducer = combineReducers({
   changePage: viewMainPageReducer,
@@ -34,6 +35,7 @@ var rootReducer = combineReducers({
   quantity: setQuantityReducer,
   outfitsCarouselIndex: setOutfitsIndexReducer,
   relatedCarouselIndex: setRelatedIndexReducer,
+  questions: setQuestionsReducer,
 });
 
 export default rootReducer;

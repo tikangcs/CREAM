@@ -258,9 +258,13 @@ class AddReview extends React.Component {
     var characteristics = [];
     (() => {
       if (this.props.characteristics) {
-        Object.keys(this.props.characteristics).map((element) => {
+        Object.keys(this.props.characteristics).map((element, i) => {
           characteristics.push(
-            <div className="characteristic-radio" style={{ display: "grid" }}>
+            <div
+              className="characteristic-radio"
+              style={{ display: "grid" }}
+              key={i}
+            >
               <br></br>
               <p>{element}*: </p>
               <label htmlFor={`${element}-1`}>

@@ -29,6 +29,7 @@ var initialSate = {
   outfitsCarouselIndex: 0,
   relatedCarouselIndex: 0,
   changePage: true,
+  questions: [],
 };
 
 export const store = createStore(

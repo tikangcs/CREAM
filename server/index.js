@@ -12,7 +12,6 @@ app.use(express.static("dist"));
 
 app.get("/*", function (req, res, next) {
   const url = `https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc${req.url}`;
-  console.log(req.url);
   axios
     .get(url, {
       headers: {

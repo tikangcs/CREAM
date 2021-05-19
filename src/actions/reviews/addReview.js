@@ -1,14 +1,25 @@
 // import TOKEN from '../../../config.js';
-import axios from 'axios';
-import fetchReviews from './fetchReviews.js';
-import store from '../../store/store.js';
+import axios from "axios";
+import fetchReviews from "./fetchReviews.js";
+import store from "../../store/store.js";
 
-var addReview = (productId, count = 2, sort = 'relevant', rating, summary, body, recommend, name, email, photos, characteristics) => {
-  console.log(productId, count, 'addReviews')
+var addReview = (
+  productId,
+  count = 2,
+  sort = "relevant",
+  rating,
+  summary,
+  body,
+  recommend,
+  name,
+  email,
+  photos,
+  characteristics
+) => {
+  console.log(productId, count, "addReviews");
   return (dispatch) => {
-
     axios({
-      method: 'post',
+      method: "post",
       url: `/reviews/`,
       data: {
         product_id: productId,
@@ -19,32 +30,30 @@ var addReview = (productId, count = 2, sort = 'relevant', rating, summary, body,
         name: name,
         email: email,
         photos: photos,
-        characteristics: characteristics
-      }
+        characteristics: characteristics,
+      },
       // transformRequest: [function (data, headers) {
       //   // Do whatever you want to transform the data
       //   data = JSON.stringify(data)
       //   return data;
       // }],
+    })
+      .then((res) => {
+        console.log(res, "res");
+        if (res.status === 201) {
+          alert("Review Submitted", res.status);
+        } else {
+          alert("Review Submission Error", res.status);
+        }
 
-
-    }).then((res) => {
-      console.log(res, 'res');
-      if (res.status === 201) {
-        alert('Review Submitted', res.status);
-      } else {
-        alert ('Review Submission Error', res.status);
-      }
-
-       fetchReviews(productId, count, sort);
-      //  return res;
+        fetchReviews(productId, count, sort);
+        //  return res;
       })
       .catch((err) => {
-        console.log(err, 'err')
-        alert ('Review Submission Error');
+        console.log(err, "err");
+        alert("Review Submission Error");
       });
-  }
-}
+  };
+};
 
-
-  export default addReview
+export default addReview;
