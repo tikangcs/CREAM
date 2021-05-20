@@ -14,5 +14,5 @@ ReactDOM.render(
     </PersistGate>
   </Provider>,
   document.getElementById("app"),
-  () => handleProductSelect("11005")(store.dispatch)
+  () => handleProductSelect("11006")(store.dispatch)
 );

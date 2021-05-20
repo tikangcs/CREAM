@@ -7,7 +7,7 @@ var fetchReviews = (productId, page = 1, count = 5) => {
     axios
       .get(`/qa/questions?product_id=${productId}&page=${page}&count=${count}`)
       .then(({ data }) => {
-        dispatch(setQuestions(data));
+        dispatch(setQuestions(data.results));
       })
       .catch((err) => {
         console.log(err, "err");

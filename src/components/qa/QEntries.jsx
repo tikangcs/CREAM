@@ -12,6 +12,7 @@ let QEntries = function ({
   answers,
   qCount,
 }) {
+  console.log("answers", answers);
   return (
     <>
       <div className="QAqentries">

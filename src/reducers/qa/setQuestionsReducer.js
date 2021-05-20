@@ -1,6 +1,6 @@
 import Redux from "redux";
 
-var setCurrentQuestionsReducer = (state = [], action) => {
+var setQuestionsReducer = (state = [], action) => {
   if (action.type === "SET_QUESTIONS") {
     return action.payload;
   } else {
@@ -8,4 +8,4 @@ var setCurrentQuestionsReducer = (state = [], action) => {
   }
 };
 
-export default setCurrentQuestionsReducer;
+export default setQuestionsReducer;
