@@ -1,7 +1,8 @@
 import React from "react";
+import QEntries from "./QEntries";
 
 const List = ({ questions }) => {
-  console.log("QAList", questions);
+  console.log("QAList", questions.results);
   return (
     <>
       <div className="QAlist">
@@ -32,21 +33,24 @@ const List = ({ questions }) => {
       </div>
 
       <div className="QAlist_container">
-        List of Question entries
-        {/* {questions.map((question) => {
-          return (
-            <QuestionEntries
-              body={question.question_body}
-              asker={question.asker_name}
-              date={question.question_date}
-              helpfulCount={question.question_helpfulness}
-              reported={question.reported}
-              answers={Object.values(question.answers)}
-              qCount={qCount}
-              key={question.question_id}
-            />
-          );
-        })} */}
+        {questions.results ? (
+          questions.results.map((question) => {
+            return (
+              <QEntries
+                body={question.question_body}
+                asker={question.asker_name}
+                date={question.question_date}
+                helpfulCount={question.question_helpfulness}
+                reported={question.reported}
+                answers={Object.values(question.answers)}
+                qCount={questions.length}
+                key={question.question_id}
+              />
+            );
+          })
+        ) : (
+          <></>
+        )}
       </div>
       <div>
         <div className="QAlist_loadMoreQuestions">

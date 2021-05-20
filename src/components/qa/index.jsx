@@ -3,7 +3,7 @@ import QASearch from "../../containers/qa/QASearch";
 import QAList from "../../containers/qa/QAList";
 
 const QA = ({ questions }) => {
-  console.log("QAContainer", questions);
+  // console.log("QAContainer", questions);
   return (
     <div className="QAcontainer">
       <h1 className="QAcontainer_header">Customer Questions</h1>
@@ -20,20 +20,6 @@ const QA = ({ questions }) => {
       </div>
       <QASearch />
       <QAList />
-      {questions.results ? (
-        <ul className="product-features-list">
-          {questions.results.map((question, i) => {
-            return (
-              <li key={`${i}-question`}>
-                <i className="fas fa-check"></i>
-                {question.question_id}
-              </li>
-            );
-          })}
-        </ul>
-      ) : (
-        <div></div>
-      )}
     </div>
   );
 };

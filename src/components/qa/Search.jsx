@@ -3,7 +3,7 @@ import React from "react";
 // STATE: questions, query, answers, results from fuse search package
 
 const Search = ({ questions }) => {
-  console.log("QASearch", questions);
+  // console.log("QASearch", questions);
   return (
     <>
       <div className="QAsearch">
