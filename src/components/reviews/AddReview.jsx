@@ -112,8 +112,6 @@ class AddReview extends React.Component {
     } else {
       var x = false;
     }
-
-    console.log(typeof x, x);
     this.setState({ recommend: x });
   }
 
@@ -171,19 +169,6 @@ class AddReview extends React.Component {
     } else {
       var state = this.state;
 
-      console.log(
-        this.props.id,
-        this.props.length,
-        this.props.sort,
-        state.rating,
-        state.summary,
-        state.body,
-        state.recommend,
-        state.nickname,
-        state.email,
-        state.photos,
-        state.characteristics
-      );
       this.props.add(
         this.props.id,
         this.props.length,
@@ -440,7 +425,7 @@ class AddReview extends React.Component {
               {/* {
               if (this.props.characteristics) {
                 Object.keys(this.props.characteristics).map((element) => {
-                  console.log(element)
+
                   return (<div>
                     <p>hi</p> </div>)
                 })

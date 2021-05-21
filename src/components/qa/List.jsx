@@ -7,7 +7,6 @@ const List = ({ product, questions }) => {
   );
   const [displayedQIndex, setDisplayedQIndex] = useState(0);
   const [isQFullyLoaded, setIsQFullyLoaded] = useState(false);
-  const [currentSort, setCurrentSort] = useState("helpful");
   const renderQuestions = (index) => {
     setDisplayedQuestions(questions.slice(0, index));
     setDisplayedQIndex(index);
@@ -35,15 +34,11 @@ const List = ({ product, questions }) => {
     setIsQFullyLoaded(false);
   };
 
-  const sortClickHandler = (e) => {
-    setCurrentSort(e.target.value);
-  };
-
   useEffect(() => {
     questions.length < 2
       ? renderQuestions(questions.length)
       : renderQuestions(2);
-  }, [currentSort]);
+  }, []);
 
   if (!questions.length) return <></>;
   return (
@@ -57,18 +52,10 @@ const List = ({ product, questions }) => {
             <b>{`Sort: `}</b>
           </div>
           <select className="QAlist_sortButton">
-            <option
-              className="QAlist_sortLinks"
-              value="helpful"
-              onClick={sortClickHandler}
-            >
+            <option className="QAlist_sortLinks" value="helpful">
               Most Helpful
             </option>
-            <option
-              className="QAlist_sortLinks"
-              value="recent"
-              onClick={sortClickHandler}
-            >
+            <option className="QAlist_sortLinks" value="recent">
               Most Recent
             </option>
           </select>
@@ -108,14 +95,8 @@ const List = ({ product, questions }) => {
               type="button"
               onClick={loadQClickHandler}
             >
-              Show more questions
-            </button>
-            <button
-              className="QAlist_loadMoreQuestionsButton"
-              type="button"
-              onClick={hideQClickHandler}
-            >
-              Show less questions
+              Show more questions (
+              {questions.length - displayedQuestions.length})
             </button>
           </div>
         ) : (

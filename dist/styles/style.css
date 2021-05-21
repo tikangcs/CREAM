@@ -847,7 +847,6 @@ tr th {
 .add-review-head button,
 .add-review-form input[type="submit"],
 .add-review-form label[for="add-review-photos"] {
-  background-color: white;
   border: 1px solid black;
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
   font-size: 50;
@@ -1601,9 +1600,9 @@ tr th {
 
 .QAsearch {
   /* background-color: rgb(240, 241, 145);  */
-  display: flex;
-  justify-content: center;
+  width: 560px;
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+  overflow: auto;
 }
 
 .QAsearch_subtext {
@@ -1611,13 +1610,21 @@ tr th {
 }
 
 .QAsearch_bar {
+  flex: 1 0 auto;
   height: 2rem;
+  width: 560px;
 }
 
 .QAsearchResults {
-  /* background-color: rgb(240, 241, 145); */
+  background-color: rgb(240, 241, 145);
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  width: 560px;
+}
+
+.QAsearchResultItem {
+  border: 1px solid black;
+  width: 560px;
 }
 
 .QAqmodal {

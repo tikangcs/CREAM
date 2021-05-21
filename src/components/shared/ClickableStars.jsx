@@ -21,7 +21,6 @@ class ClickableStars extends React.Component {
 
   handleStarClick(event) {
     this.setState({ total: event });
-    console.log(this);
     this.props.rating(event);
   }
 

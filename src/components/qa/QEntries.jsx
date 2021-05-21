@@ -12,7 +12,7 @@ let QEntries = function ({ body, asker, date, answers, product }) {
   const [showAModal, setShowAModal] = useState(false);
   const [markedQHelpful, setMarkedQHelpful] = useState(false);
   const [markedQReported, setMarkedQReported] = useState(false);
-  console.log(displayedAnswers);
+
   const renderAnswers = (index) => {
     setDisplayedAnswers(arrayOfAnswers.slice(0, index));
     setDisplayedIndex(index);

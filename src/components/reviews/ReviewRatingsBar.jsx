@@ -1,11 +1,6 @@
 import React from "react";
 import logInteraction from "../shared/logInteraction.js";
 
-//potential filtering for later
-// onClick = {() => {console.log(stats.product_id, 2, getReviews.sort, value); getReviews.get(stats.product_id, 2 , getReviews.sort, value)}}
-
-// ({ratings, value, width, getReviews, stats})
-
 class ReviewRatingsBar extends React.Component {
   constructor(props) {
     super(props);
