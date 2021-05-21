@@ -43,7 +43,6 @@ In addition to adding a brand new section, the goal of this project was to touch
 <img src="documentation/ProductsScreen.png" width="80%" height="80%">
 <img src="documentation/RelatedScreen.png" width="80%" height="80%">
 <img src="documentation/ReviewsScreen.png" width="80%" height="80%">
-<img src="documentation/QAScreen.png" width="80%" height="80%">
 
 ## Credits
 Credit to the Backers for their inital work 
