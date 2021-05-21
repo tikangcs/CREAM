@@ -43,7 +43,7 @@ let QEntries = function ({ body, asker, date, answers, product }) {
   };
 
   const collapseClickHandler = (e) => {
-    renderAnswers(2);
+    renderAnswers(1);
     setIsFullyLoaded(false);
   };
 
@@ -55,7 +55,7 @@ let QEntries = function ({ body, asker, date, answers, product }) {
     setMarkedQReported(!markedQReported);
   };
   useEffect(() => {
-    renderAnswers(2);
+    renderAnswers(1);
   }, []);
   return (
     <>
@@ -73,23 +73,23 @@ let QEntries = function ({ body, asker, date, answers, product }) {
               })}
             </div>
             <div className="QAqentries_metaContainer">
-              <button
-                className="QAqentries_addButton"
-                type="button"
+              <a
+                className="QAqentries_meta"
+                href="#"
                 onClick={aModalClickHandler}
               >
                 Add an answer
-              </button>
+              </a>
               <a
                 className="QAqentries_meta"
-                href="javascript:void();"
+                href="#"
                 onClick={toggleQHelpfulClickHandler}
               >
                 {markedQHelpful ? "Helpful!" : "Mark as Helpful"}
               </a>
               <a
                 className="QAqentries_meta"
-                href="javascript:void();"
+                href="#"
                 onClick={toggleQReportedClickHandler}
               >
                 {markedQReported ? "Reported!" : "Report"}
@@ -104,65 +104,56 @@ let QEntries = function ({ body, asker, date, answers, product }) {
           </div>
         </div>
         <div className="QAqentries_answers"></div>
-      </div>
-      {isHidden ? null : (
-        <div className="QAqentries_displayedAnswers">
-          {displayedAnswers.map((answer, i) => {
-            return (
-              <AnswerEntries
-                index={i}
-                responder={answer.answerer_name}
-                body={answer.body}
-                date={answer.date}
-                helpfulCount={answer.helpfulness}
-                images={answer.photos}
-                aCount={arrayOfAnswers.length}
-                key={answer.id}
-              />
-            );
-          })}
-          <div>
-            {isFullyLoaded ? (
-              <div className="QAqentries_collapse">
-                <span className="QAqentries_displayCount"></span>
-                <button
-                  className="QAqentries_collapseButton"
-                  type="button"
-                  onClick={collapseClickHandler}
-                >
-                  Collapse answers
-                </button>
-              </div>
-            ) : arrayOfAnswers.length > 2 ? (
-              <div className="QAqentries_loadMore">
-                <div className="QAqentries_displayCount"></div>
-                <div className="QAqentries_displayButtons">
+        {isHidden ? null : (
+          <div className="QAqentries_displayedAnswers">
+            {displayedAnswers.map((answer, i) => {
+              return (
+                <AnswerEntries
+                  index={i}
+                  responder={answer.answerer_name}
+                  body={answer.body}
+                  date={answer.date}
+                  helpfulCount={answer.helpfulness}
+                  images={answer.photos}
+                  aCount={arrayOfAnswers.length}
+                  key={answer.id}
+                />
+              );
+            })}
+            <div className="QAqentries_loadButtonsContainer">
+              {isFullyLoaded ? (
+                <div className="QAqentries_collapse">
+                  <span className="QAqentries_displayCount"></span>
                   <button
-                    className="QAqentries_loadButton"
+                    className="QAqentries_collapseButton"
                     type="button"
-                    value={displayedIndex}
-                    onClick={loadClickHandler}
+                    onClick={collapseClickHandler}
                   >
-                    Show more answers
-                  </button>
-                  <button
-                    className="QAqentries_loadButton"
-                    type="button"
-                    value={displayedIndex}
-                    onClick={hideClickHandler}
-                  >
-                    Show less answers
+                    Collapse answers
                   </button>
                 </div>
-              </div>
-            ) : (
-              <div className="QAqentries_loadMore">
-                <div className="QAqentries_displayCount"></div>
-              </div>
-            )}
+              ) : arrayOfAnswers.length > 2 ? (
+                <div className="QAqentries_loadMore">
+                  <div className="QAqentries_displayButtons">
+                    <button
+                      className="QAqentries_loadButton"
+                      type="button"
+                      value={displayedIndex}
+                      onClick={loadClickHandler}
+                    >
+                      See more answers
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="QAqentries_loadMore">
+                  <div className="QAqentries_displayCount"></div>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {showAModal ? (
         <ReactModal

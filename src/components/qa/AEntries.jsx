@@ -24,76 +24,60 @@ let AnswerEntries = ({ responder, body, date, images }) => {
   return (
     <>
       <div className="QAaentries">
-        <div className="QAaentries_metaContainer">
-          {responder === "Seller" ? (
-            <span className="QAaentries_meta">
-              From: <b>{responder}</b>
-            </span>
-          ) : (
-            <span className="QAaentries_meta">From: {responder}</span>
-          )}
-          <span className="QAaentries_meta">
-            {new Date(date).toLocaleString("default", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            })}
-          </span>
-          <a
-            className="QAaentries_meta"
-            href="#"
-            onClick={toggleAHelpfulClickHandler}
-          >
-            {markedAHelpful ? "Helpful!" : "Mark as Helpful"}
-          </a>
-          <a
-            className="QAaentries_meta"
-            href="#"
-            onClick={toggleAReportedClickHandler}
-          >
-            {markedAReported ? "Reported" : "Report"}
-          </a>
-        </div>
-        <div className="QAaentries_answerBody">
-          <div>
-            <b>Answer:</b>
-          </div>
-          <div className="QAaentries_answer">{body}</div>
-          <div>
-            <b>Images:</b>
-          </div>
-          <div className="QAaentries_images">
-            {images.map((image, i) => {
-              return (
-                <>
-                  {showImageModal ? (
-                    <ReactModal
-                      bodyOpenClassName="imageModal"
-                      isOpen={showImageModal}
-                      ariaHideApp={false}
-                      onRequestClose={toggleImageClickHandler}
-                      key={i}
-                    >
-                      <img
-                        className="QAaentries_imageModal"
-                        alt="answer-image"
-                        src={image}
-                        onClick={toggleImageClickHandler}
-                        key={i}
-                      ></img>
-                    </ReactModal>
-                  ) : (
-                    <img
-                      className="QAaentries_thumbnails"
-                      alt="answer-image-thumbnail"
-                      src={image}
-                      onClick={toggleImageClickHandler}
-                      key={i}
-                    ></img>
-                  )}
-                </>
-              );
-            })}
+        <div className="QAaentries_answerBodyContainer">
+          <div className="QAaentries_answerLabel">Answer:</div>
+          <div className="QAaentries_answerContainer">
+            <div className="QAaentries_answer">{body}</div>
+            <div className="QAaentries_answerSubtext">
+              By {responder} on{" "}
+              {new Date(date).toLocaleString("default", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </div>
+            {images.length ? (
+              <div className="QAaentries_imagesContainer">
+                <div className="QAaentries_imagesSubtext">
+                  <b>User Images:</b>
+                </div>
+                <div className="QAaentries_images">
+                  {images.map((image, i) => {
+                    return (
+                      <>
+                        {showImageModal ? (
+                          <ReactModal
+                            bodyOpenClassName="imageModal"
+                            isOpen={showImageModal}
+                            ariaHideApp={false}
+                            onRequestClose={toggleImageClickHandler}
+                            key={i}
+                          >
+                            <img
+                              className="QAaentries_imageModal"
+                              alt="answer-image"
+                              src={image}
+                              onClick={toggleImageClickHandler}
+                              key={i}
+                            ></img>
+                          </ReactModal>
+                        ) : (
+                          <img
+                            className="QAaentries_thumbnails"
+                            alt="answer-image-thumbnail"
+                            src={image}
+                            onClick={toggleImageClickHandler}
+                            key={i}
+                          ></img>
+                        )}
+                      </>
+                    );
+                  })}
+                </div>
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>

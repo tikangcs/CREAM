@@ -24,7 +24,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat";
+  font-family: "VarelaRound";
 }
 
 p,
@@ -43,6 +43,7 @@ h5 {
   flex-direction: column;
   width: 100vw;
   height: 100%;
+  max-height: 1000vh;
   background-color: rgba(232, 236, 241, 1);
 }
 
@@ -891,7 +892,7 @@ tr th {
   gap: 0px 0px;
   grid-template-areas:
     " sum sum . user "
-    " sta . rec rec  "
+    " sta . . rec  "
     " bod bod bod bod "
     " hel . pho pho "
     " resp resp resp . ";
@@ -906,6 +907,7 @@ tr th {
 
 .review-user-date {
   grid-area: user;
+  font-size: 0.8rem;
 }
 
 .review-body {
@@ -1296,10 +1298,9 @@ tr th {
 }
 
 .QAcontainer {
-  height: 80vh;
   width: 80vw;
   margin: 0 auto;
-  padding-top: 1%;
+  padding: 1% 0;
   border-top: 2px solid black;
 }
 
@@ -1356,8 +1357,7 @@ tr th {
 }
 
 .QAlist_askButton:hover {
-  background-color: #f4abab;
-  color: white;
+  opacity: 0.7;
 }
 
 .QAlist_sortContainer {
@@ -1376,13 +1376,12 @@ tr th {
 }
 
 .QAlist_sortButton:hover {
-  background-color: #f4abab;
-  color: white;
+  opacity: 0.7;
 }
 
 .QAlist_container {
   border: 1px, solid, black;
-  max-height: 550px;
+  max-height: 500vh;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -1401,8 +1400,7 @@ tr th {
 }
 
 .QAlist_loadMoreQuestionsButton:hover {
-  background-color: #f4abab;
-  color: white;
+  opacity: 0.7;
 }
 
 .QAqentries {
@@ -1417,11 +1415,13 @@ tr th {
 .QAqentries_metaContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1% 2% 0% 2%;
 }
 
 .QAqentries_meta {
   font-size: 0.8em;
+  color: black;
 }
 
 .QAqentries_questionCollpase {
@@ -1432,7 +1432,7 @@ tr th {
   display: flex;
   padding: 1% 1%;
   border: 1px solid rgba(0, 0, 0, rgb(0, 0, 0, 0.5));
-  border-radius: 1rem;
+  border-radius: 3px;
   width: 90%;
   margin: auto;
 }
@@ -1458,10 +1458,16 @@ tr th {
 }
 
 .QAqentries_displayedAnswers {
-  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
   overflow: auto;
   margin: auto;
-  width: 70%;
+  margin-bottom: 1%;
+  padding: 0.5% 0.5%;
+  border: 1px solid black;
+  width: 80%;
+  background-color: rgba(232, 236, 241, 1);
 }
 
 .QAqentries_displayCount {
@@ -1474,13 +1480,13 @@ tr th {
 }
 
 .QAqentries_loadButton:hover {
-  background-color: #f4abab;
-  color: white;
+  opacity: 0.7;
 }
 
 .QAqentries_displayButtons {
   display: flex;
   justify-content: space-evenly;
+  margin: 1% 0;
 }
 
 .QAqentries_addButton {
@@ -1488,8 +1494,7 @@ tr th {
 }
 
 .QAqentries_addButton:hover {
-  background-color: #f4abab;
-  color: white;
+  opacity: 0.7;
 }
 
 .QAaentries_loadMore {
@@ -1509,8 +1514,7 @@ tr th {
 }
 
 .QAaentries_loadButton:hover {
-  background-color: #f4abab;
-  color: white;
+  opacity: 0.7;
 }
 
 .QAaentries_collapse {
@@ -1523,15 +1527,16 @@ tr th {
 }
 
 .QAaentries_collapseButton:hover {
-  background-color: #f4abab;
-  color: white;
+  opacity: 0.7;
 }
 
 .QAaentries {
-  height: 140px;
-  margin: 1em 0;
-  /* border-radius: 0.3rem; */
+  padding: 0 10px 0 10px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 253);
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+  margin-bottom: 1%;
 }
 
 .QAaentries_metaContainer {
@@ -1544,31 +1549,50 @@ tr th {
   font-size: 0.8em;
 }
 
-.QAaentries_answerBody {
-  padding: 0px 1%;
+.QAaentries_answerBodyContainer {
+  display: flex;
+  padding: 1% 1%;
   border: 1px solid rgba(0, 0, 0, rgb(0, 0, 0, 0.5));
   border-radius: 1rem;
-  width: 90%;
-  margin: auto;
-  overflow: auto;
-  font-size: 0.8em;
+}
+.QAaentries_answerBody {
+  font-size: 1.1rem;
+}
+.QAaentries_answerSubtext {
+  font-size: 0.7rem;
+}
+.QAaentries_answerLabel {
+  width: 5vw;
+}
+.QAaentries_answerContainer {
+  flex: 1 1 auto;
+}
+
+.QAaentries_imagesContainer {
+  margin-top: 1%;
+  flex: 1 1 auto;
+}
+
+.QAaentries_imagesSubtext {
+  font-size: 0.8rem;
 }
 
 .QAaentries_images {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: left;
 }
 
 .QAaentries_thumbnails {
   border: solid 1px rgb(0, 0, 0, 0.5);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 10%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-top: 1%;
+  margin-right: 3%;
+  height: 80px;
+  width: 80px;
 }
 
 .QAaentries_imageModal {
-  background-color: #f4abab;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1609,21 +1633,22 @@ tr th {
 .QAqmodal_subtitle {
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 2rem;
+  margin-bottom: 2%;
 }
 
 .QAqmodal_label {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .QAqmodal_subscript {
-  font-size: 1em;
+  font-size: 0.7em;
+  margin-bottom: 1%;
 }
 
 /* QA-AnswerModal Styling */
 .QAamodal {
-  background-color: #f4abab;
 }
 
 .QAamodal_title {
@@ -1655,9 +1680,16 @@ tr th {
 }
 
 .QAamodal_submitButton {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.QAqmodal_submitButton {
+  margin-top: 2%;
+  margin-right: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .QAimage {
@@ -1677,5 +1709,6 @@ tr th {
 
 [class^="ReactModal"] {
   width: 70% !important;
+  height: 80% !important;
   margin: auto !important;
 }

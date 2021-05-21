@@ -3,7 +3,7 @@ import QEntries from "./QEntries";
 
 const List = ({ product, questions }) => {
   const [displayedQuestions, setDisplayedQuestions] = useState(
-    questions.slice(0, 4)
+    questions.slice(0, 2)
   );
   const [displayedQIndex, setDisplayedQIndex] = useState(0);
   const [isQFullyLoaded, setIsQFullyLoaded] = useState(false);
@@ -25,13 +25,13 @@ const List = ({ product, questions }) => {
   };
 
   const hideQClickHandler = (e) => {
-    if (displayedQIndex > 4) {
+    if (displayedQIndex > 2) {
       renderQuestions(displayedQIndex - 2);
     }
   };
 
   const collapseQClickHandler = (e) => {
-    renderQuestions(4);
+    renderQuestions(2);
     setIsQFullyLoaded(false);
   };
 
@@ -40,9 +40,9 @@ const List = ({ product, questions }) => {
   };
 
   useEffect(() => {
-    questions.length < 4
+    questions.length < 2
       ? renderQuestions(questions.length)
-      : renderQuestions(4);
+      : renderQuestions(2);
   }, [currentSort]);
 
   if (!questions.length) return <></>;
