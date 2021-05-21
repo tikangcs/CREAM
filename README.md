@@ -8,7 +8,10 @@
 
 ## Addition of a Questions and Answers section
 
-![](documentation/QAScreen.png)
+<img src="documentation/ProductsScreen.png" width="80%" height="80%">
+<img src="documentation/RelatedScreen.png" width="80%" height="80%">
+<img src="documentation/ReviewsScreen.png" width="80%" height="80%">
+<img src="documentation/QAScreen.png" width="80%" height="80%">
 
 This section allows asking and answering of questions for a selected product. The functionality contained within this section can be divided into several pieces:
 - View questions
@@ -18,7 +21,7 @@ This section allows asking and answering of questions for a selected product. Th
 
 ### View Questions
 
-![](documentation/Accordion.png)
+<img src="documentation/Accordion.png" width="80%" height="80%">
 
 
 ### Search for a Question
@@ -27,25 +30,11 @@ This section allows asking and answering of questions for a selected product. Th
 
 ### Asking a Question
 
-![](documentation/QuestionModal.png)
+<img src="documentation/QuestionModal.png" width="80%" height="50%">
 
 ### Answering a Question
 
-![](documentation/AnswerModal.png)
+<img src="documentation/AnswerModal.png" width="80%" height="50%">
 
-
----
-## Formatting and Stylistic changes
----
-
-### Old
-
-
-
-### New
-
-![](documentation/ProductsScreen.png)
-![](documentation/RelatedScreen.png)
-![](documentation/ReviewsScreen.png)
 
 
