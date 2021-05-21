@@ -13,32 +13,44 @@ const QA = ({ product, questions }) => {
 
   return (
     <div className="QAcontainer">
-      <h1 className="QAcontainer_header">Customer Questions and Answers</h1>
-      <h3 className="QAcontainer_subheader">{`Ask for information about ${product.name} from the customers who love it.`}</h3>
+      <div className="QAcontainer_title">
+        <h1 className="QAcontainer_header">Customer Questions and Answers</h1>
+        <h3 className="QAcontainer_subheader">{`Ask for information from the customers who love it`}</h3>
+      </div>
+
       <div className="ask-button-div">
         <input
           className="QAlist_askButton"
           type="button"
-          value="Ask a question"
+          value="Ask a new question"
           onClick={qModalClickHandler}
         ></input>
+        <div>- OR -</div>
+        <div className="QAlist_searchbar">
+          <div className="QAsearch_subtext">
+            <b>Find questions and answers by keywords</b>
+          </div>
+          <QASearch />
+        </div>
       </div>
       {showQModal ? (
-        <ReactModal isOpen={showQModal} onRequestClose={qModalClickHandler}>
+        <ReactModal
+          isOpen={showQModal}
+          ariaHideApp={false}
+          onRequestClose={qModalClickHandler}
+        >
           <QModal
             showQModal={showQModal}
             setShowQModal={setShowQModal}
-            ariaHideApp={false}
             productName={product.name}
           />
         </ReactModal>
       ) : null}
-      <QASearch />
       {questions.length ? (
         <QAList />
       ) : (
         <div className="QAlist">
-          No Questions to Display. Ask the first question!
+          No Questions to Display. Ask the first question
         </div>
       )}
     </div>

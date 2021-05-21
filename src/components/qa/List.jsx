@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import QEntries from "./QEntries";
 
-const List = ({ questions }) => {
+const List = ({ product, questions }) => {
   const [displayedQuestions, setDisplayedQuestions] = useState(
     questions.slice(0, 4)
   );
   const [displayedQIndex, setDisplayedQIndex] = useState(0);
   const [isQFullyLoaded, setIsQFullyLoaded] = useState(false);
   const [currentSort, setCurrentSort] = useState("helpful");
-
   const renderQuestions = (index) => {
     setDisplayedQuestions(questions.slice(0, index));
     setDisplayedQIndex(index);
@@ -44,7 +43,7 @@ const List = ({ questions }) => {
     questions.length < 4
       ? renderQuestions(questions.length)
       : renderQuestions(4);
-  }, []);
+  }, [currentSort]);
 
   if (!questions.length) return <></>;
   return (
@@ -53,36 +52,40 @@ const List = ({ questions }) => {
         <div className="QAlist_displayCount">
           Questions 1-{displayedQIndex} of {questions.length}
         </div>
-        <select className="QAlist_sortButton">
-          <option
-            className="QAlist_sortLinks"
-            value="helpful"
-            onClick={sortClickHandler}
-          >
-            Most Helpful
-          </option>
-          <option
-            className="QAlist_sortLinks"
-            value="recent"
-            onClick={sortClickHandler}
-          >
-            Most Recent
-          </option>
-        </select>
+        <div className="QAlist_sortContainer">
+          <div>
+            <b>{`Sort: `}</b>
+          </div>
+          <select className="QAlist_sortButton">
+            <option
+              className="QAlist_sortLinks"
+              value="helpful"
+              onClick={sortClickHandler}
+            >
+              Most Helpful
+            </option>
+            <option
+              className="QAlist_sortLinks"
+              value="recent"
+              onClick={sortClickHandler}
+            >
+              Most Recent
+            </option>
+          </select>
+        </div>
       </div>
 
       <div className="QAlist_container">
-        {displayedQuestions.map((question) => {
+        {displayedQuestions.map((question, i) => {
           return (
             <QEntries
+              index={i}
               body={question.question_body}
               asker={question.asker_name}
               date={question.question_date}
-              helpfulCount={question.question_helpfulness}
-              reported={question.reported}
               answers={Object.values(question.answers)}
-              qCount={questions.length}
               key={question.question_id}
+              product={product}
             />
           );
         })}
@@ -98,7 +101,7 @@ const List = ({ questions }) => {
               Collapse Questions
             </button>
           </div>
-        ) : (
+        ) : questions.length > 4 ? (
           <div className="QAlist_loadMoreQuestions">
             <button
               className="QAlist_loadMoreQuestionsButton"
@@ -115,6 +118,8 @@ const List = ({ questions }) => {
               Show less questions
             </button>
           </div>
+        ) : (
+          <></>
         )}
       </div>
     </>

@@ -43,6 +43,7 @@ h5 {
   flex-direction: column;
   width: 100vw;
   height: 100%;
+  background-color: rgba(232, 236, 241, 1);
 }
 
 #Landing-Page {
@@ -77,14 +78,13 @@ h5 {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   height: 110vh;
-  overflow: scroll;
 }
 
 #overview-body {
-  margin: 0 auto;
+  margin: 2% auto 0 auto;
   grid-area: 2 / 1 / 3 / 3;
   display: flex;
-  height: 75vh;
+  height: 80vh;
   flex-flow: row;
   width: 80vw;
 }
@@ -135,6 +135,7 @@ h5 {
   height: auto;
   object-fit: cover;
   max-width: 100%;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
 }
 
 .overview-zoom-image-expanded {
@@ -153,6 +154,7 @@ h5 {
   height: 100%;
   margin: 0 auto;
   cursor: crosshair;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
 }
 
 .overview-body-interaction {
@@ -225,6 +227,7 @@ h5 {
 
 .fa-check {
   color: rgb(86, 170, 86);
+  margin-right: 10px;
 }
 
 .CTA-btn {
@@ -270,10 +273,12 @@ h5 {
   padding: 1rem;
   font-size: 1.5rem;
   width: 80vw;
+  border: 2px solid black;
 }
 
 .logo {
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-size: 35px;
 }
 
@@ -391,10 +396,10 @@ input[type="checkbox"]:checked {
 
 .button-expander {
   position: absolute;
-  top: 10%;
-  right: 25%;
+  top: 2%;
+  right: 4%;
   z-index: 1;
-  color: rgb(243, 217, 217);
+  color: rgb(72, 125, 184);
   font-size: 2rem;
 }
 
@@ -425,6 +430,7 @@ input[type="checkbox"]:checked {
   border: 1px #525252 solid;
   background-color: white;
   padding: 0 15px;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
 }
 
 #out-of-stock {
@@ -445,7 +451,7 @@ input[type="checkbox"]:checked {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
+  font-weight: bold;
   height: 3rem;
   margin-top: 1rem;
   font-size: 1rem;
@@ -455,6 +461,7 @@ input[type="checkbox"]:checked {
   padding: 15px;
   background-color: white;
   margin-right: 1rem;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
 }
 
 .add-to-bag:hover {
@@ -472,6 +479,7 @@ input[type="checkbox"]:checked {
   width: auto;
   border: 1px #525252 solid;
   font-weight: bold;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
   padding: 10px;
 }
 
@@ -482,6 +490,7 @@ input[type="checkbox"]:checked {
   border: 1px #525252 solid;
   font-size: 1rem;
   font-weight: bold;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
 }
 
 #img-magnifier-glass {
@@ -587,12 +596,17 @@ p {
   flex-direction: row;
   height: auto;
   margin: 0 auto;
-  width: 80vw;
+  width: 70vw;
   align-items: center;
+  border-top: 1px solid black;
+}
+.product-description {
+  width: 45vw;
 }
 .product-features-list {
   margin-left: 1rem;
   border-left: 1px #525252 solid;
+  font-size: 1rem;
 }
 
 /* Related Products */
@@ -603,10 +617,19 @@ p {
   margin-bottom: 2%;
 }
 
-.related-products-title,
+.related-products-title {
+  border-top: 2px solid black;
+  padding-top: 1%;
+  font-size: 2rem;
+}
+
+.related-container {
+  padding-bottom: 1rem;
+}
+
 .outfits-title {
-  margin: 0px;
-  font-size: 1.5vw;
+  margin-top: 2%;
+  font-size: 2rem;
 }
 
 .carousel {
@@ -619,7 +642,7 @@ p {
   flex-direction: column;
   margin: 10px;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 2px;
   background-color: white;
   text-align: center;
   box-shadow: 0.5px 0.5px 5px gray;
@@ -688,8 +711,8 @@ p {
   display: block;
   background-color: aliceblue;
   object-fit: cover;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 .product-rating {
@@ -774,14 +797,15 @@ tr th {
 
 /* Reviews */
 .parent-reviews {
-  height: 100vh;
+  height: 90vh;
   width: 80vw;
   margin: 0 auto;
-  padding: 5px;
+  padding-top: 1%;
+  border-top: 2px solid black;
 }
 
 .review-title {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .review-title h1 {
@@ -790,6 +814,7 @@ tr th {
 
 .reviews-content {
   display: flex;
+  height: 80vh;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -799,11 +824,21 @@ tr th {
 .review-list {
   width: 58vw;
 }
+.review-list-head {
+  margin-bottom: 1%;
+}
 
 .review-tiles {
-  height: 50vh;
+  height: 65vh;
   overflow: auto;
   margin-bottom: 1rem;
+}
+
+.add-review-button {
+  margin-bottom: 2%;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-size: 50;
 }
 
 .review-tiles button,
@@ -812,12 +847,13 @@ tr th {
 .add-review-form input[type="submit"],
 .add-review-form label[for="add-review-photos"] {
   background-color: white;
-  border: solid #487db8 1px;
-  color: #376294;
-  font-family: Montserrat;
+  border: 1px solid black;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+  font-size: 50;
 
   margin-top: 1rem;
   height: 2rem;
+  width: 8rem;
   transition: opacity 0.1s;
 }
 .add-review-head button,
@@ -826,6 +862,7 @@ tr th {
   background-color: gainsboro;
   color: black;
   border-color: black;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
 }
 
 .add-review-form label[for="add-review-photos"] {
@@ -843,10 +880,11 @@ tr th {
 
 .review-tile {
   padding: 0 10px 0 10px;
-  border: solid #7b9eb3 2px;
+  border: 1px solid black;
   background-color: rgb(255, 255, 253);
-  border-radius: 10px;
-  margin-bottom: 1px;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+  margin-bottom: 1%;
+  margin-top: 1%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
   grid-template-rows: 0.5fr 0.2fr repeat(auto-fit, minmax(10vh, 1fr)) 0.4fr;
@@ -945,11 +983,12 @@ tr th {
 }
 
 .reviews-ratings {
-  width: 30vw;
+  width: 20vw;
 }
 
 .reviews-recommend-percent {
-  margin-top: 0.5rem;
+  margin-top: 8%;
+  margin-bottom: 16%;
 }
 
 .review-bar {
@@ -994,7 +1033,7 @@ tr th {
 }
 
 .review-characteristic {
-  width: 80%;
+  width: 70%;
   margin-bottom: 1rem;
 }
 
@@ -1154,6 +1193,7 @@ tr th {
   #overview-body,
   .overview-description,
   #related-products,
+  .QAcontainer,
   .parent-reviews {
     width: 100vw;
   }
@@ -1163,7 +1203,7 @@ tr th {
   #overview-body {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    height: 100vh;
   }
   #overview-body-image {
     width: 100vw;
@@ -1198,9 +1238,9 @@ tr th {
   body {
     font-size: 14px;
   }
-  #overview-body {
+  /* #overview-body {
     overflow: scroll;
-  }
+  } */
 
   #overview-body-image img {
     min-height: 400px;
@@ -1256,25 +1296,35 @@ tr th {
 }
 
 .QAcontainer {
-  width: 75%;
-  max-height: 1200px;
-  margin: 2rem auto;
-  overflow: auto;
+  height: 80vh;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 1%;
+  border-top: 2px solid black;
+}
+
+.QAcontainer_title {
+  margin-bottom: 1%;
 }
 
 .QAcontainer_header {
   display: flex;
-  justify-content: center;
+}
+.QAcontainer_header h1 {
+  font-size: 2rem;
 }
 
-.QAcontainer_subheader {
-  display: flex;
-  justify-content: center;
+.QAcontainer_subheader h3 {
+  font-size: 2rem;
 }
 
 .QAlist {
+  border: 1px, solid, black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
 }
 
 .QAlist_displayCount {
@@ -1282,15 +1332,25 @@ tr th {
 }
 
 .ask-button-div {
-  margin: auto;
-  width: 50%;
+  display: flex;
+  align-items: center;
+  margin: "2%";
+  justify-content: center;
 }
 
+.QAlist_searchbar {
+  margin-left: 2%;
+  border-radius: 3px;
+}
 .QAlist_askButton {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 2%;
+  width: 14vw;
+  height: 8vh;
   font-size: 1em;
-  padding: 2%;
   background-color: #f2f2f2;
+  border-radius: 3px;
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
   font-weight: bold;
 }
@@ -1298,6 +1358,13 @@ tr th {
 .QAlist_askButton:hover {
   background-color: #f4abab;
   color: white;
+}
+
+.QAlist_sortContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .QAlist_sortButton {
@@ -1314,8 +1381,13 @@ tr th {
 }
 
 .QAlist_container {
+  border: 1px, solid, black;
   max-height: 550px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .QAlist_loadMoreQuestions {
@@ -1334,15 +1406,18 @@ tr th {
 }
 
 .QAqentries {
-  margin: 1rem auto;
-  border-radius: 0.3rem;
+  padding: 0 10px 0 10px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 253);
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
-  max-height: 600px;
+  margin-bottom: 1%;
+  width: 60%;
 }
 
 .QAqentries_metaContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 1% 2% 0% 2%;
 }
 
 .QAqentries_meta {
@@ -1353,15 +1428,29 @@ tr th {
   float: right;
 }
 
-.QAqentries_questionBody {
-  font-size: medium;
-  padding: 0px 1%;
+.QAqentries_questionBodyContainer {
+  display: flex;
+  padding: 1% 1%;
   border: 1px solid rgba(0, 0, 0, rgb(0, 0, 0, 0.5));
   border-radius: 1rem;
   width: 90%;
   margin: auto;
 }
 
+.QAqentries_questionBody {
+  font-size: 1.1rem;
+}
+
+.QAqentries_questionSubtext {
+  font-size: 0.7rem;
+}
+
+.QAqentries_questionLabel {
+  width: 6vw;
+}
+.QAqentries_questionContainer {
+  flex: 1 1 auto;
+}
 .QAqentries_answers {
   display: flex;
   justify-content: space-around;
@@ -1490,11 +1579,15 @@ tr th {
   /* background-color: rgb(240, 241, 145);  */
   display: flex;
   justify-content: center;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+}
+
+.QAsearch_subtext {
+  margin-bottom: 1%;
 }
 
 .QAsearch_bar {
-  height: 30px;
-  margin-top: 10px;
+  height: 2rem;
 }
 
 .QAsearchResults {

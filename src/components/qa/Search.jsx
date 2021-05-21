@@ -13,7 +13,7 @@ const Search = ({ questions }) => {
             className="QAsearch_bar"
             value={"update with an onchange query state"}
             onChange={() => console.log("searchchangehandler")}
-            placeholder="Have a question? Search for your answers..."
+            placeholder="Have a question? Search for answers"
             size="70"
           ></input>
         </label>

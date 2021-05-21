@@ -11,7 +11,9 @@ const ReviewList = (props) => {
     return (
       <div className="review-list">
         <div className="review-list-head">
-          <label htmlFor="sort-by">Sort By</label>
+          <label htmlFor="sort-by">
+            <b>{`Sort: `}</b>
+          </label>
           <select
             onChange={() => {
               props.more(
@@ -21,6 +23,7 @@ const ReviewList = (props) => {
               );
               clickLogger("review-list-sort", props.product);
             }}
+            className="QAlist_sortButton"
             name="sort-by"
             id="sort-by"
           >

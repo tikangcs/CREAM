@@ -385,6 +385,7 @@ class AddReview extends React.Component {
         <ReactModal
           isOpen={this.state.showForm}
           contentLabel="Add Review From"
+          ariaHideApp={false}
           style={{ position: "relative" }}
           onRequestClose={this.handleCloseForm}
         >

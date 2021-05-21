@@ -52,6 +52,7 @@ class ReviewPhoto extends React.Component {
         <ReactModal
           isOpen={this.state.showPhoto}
           contentLabel="Review Photo"
+          ariaHideApp={false}
           onRequestClose={this.handleClosePhoto}
           style={{ position: "relative" }}
         >

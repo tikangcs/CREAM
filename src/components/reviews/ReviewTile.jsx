@@ -115,9 +115,9 @@ class ReviewTile extends React.Component {
               return <p>Photos:</p>;
             }
           })()}
-          {this.props.review.photos.map((element) => {
+          {this.props.review.photos.map((element, i) => {
             return (
-              <div className="review-photo">
+              <div className="review-photo" key={i}>
                 {/* <img src = {element.url} style = {{maxWidth: '100px', maxHeight: '100px'}} /> */}
                 <ReviewPhoto id={element.id} url={element.url} />
               </div>

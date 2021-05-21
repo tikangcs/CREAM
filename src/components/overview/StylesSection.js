@@ -39,8 +39,9 @@ let StylesSection = ({
               >
                 <input type="checkbox" id={style.style_id} checked />
                 <img
-                  width={200}
+                  width={400}
                   height={400}
+                  border={"1px solid black"}
                   name={style.style_id}
                   key={i}
                   className="individual-styles"

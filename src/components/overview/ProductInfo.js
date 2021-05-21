@@ -3,8 +3,10 @@ import React, { Fragment } from "react";
 let ProductInfo = ({ product, currentStyle }) => {
   return (
     <Fragment>
-      <p>{product.category}</p>
-      <h2>{product.name}</h2>
+      <p style={{ fontSize: 16 }}>{product.category}</p>
+      <h2>
+        <strong>{product.name}</strong>
+      </h2>
       {currentStyle.sale_price ? (
         <div style={{ color: "red" }}>
           ${currentStyle.sale_price}
@@ -15,11 +17,10 @@ let ProductInfo = ({ product, currentStyle }) => {
       ) : (
         <p>${currentStyle.original_price}</p>
       )}
-      <p>
-        <strong>
-          {currentStyle.name} {`>`}
-        </strong>{" "}
-        Selected Style
+      <p style={{ fontSize: 20 }}>
+        Selected Style {`>`}
+        <br />
+        <strong>{currentStyle.name}</strong>{" "}
       </p>
     </Fragment>
   );

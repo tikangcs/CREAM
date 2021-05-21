@@ -146,7 +146,7 @@ class ReviewStats extends React.Component {
                 (parseInt(this.props.stats.recommended[true]) +
                   parseInt(this.props.stats.recommended[false]))
             )}
-            % of reviews recommend this product.
+            <b>% recommend this product.</b>
           </p>
 
           {Object.keys(this.props.stats.characteristics).map((element, i) => (

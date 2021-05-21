@@ -95,10 +95,9 @@ let SizeDropDown = ({
 
       <div className="star-add-to-bag-div">
         <button type="submit" className="add-to-bag">
-          {" "}
           <p>
-            ADD TO BAG <i className="fas fa-plus"></i>{" "}
-          </p>{" "}
+            <b>ADD TO BAG</b> <i className="fas fa-plus"></i>
+          </p>
         </button>
         <button
           aria-label="add to outfit"

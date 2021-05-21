@@ -9,14 +9,14 @@ const Overview = ({ expand, product, fetchProduct }) => {
       <NavContainer />
       {expand ? <ExpandedGalleryContainer /> : <DefaultGalleryContainer />}
       <div className="overview-description">
-        <h3>{product.description || ""} </h3>
+        <h3 className="product-description">{product.description || ""} </h3>
         {product.features ? (
           <ul className="product-features-list">
             {product.features.map((feature, i) => {
               return (
                 <li key={`${i}-feature`}>
                   <i className="fas fa-check"></i>
-                  {feature.feature}: {feature.value}
+                  <b>{feature.feature}</b>: {feature.value}
                 </li>
               );
             })}

@@ -10,14 +10,16 @@ const Carousel = ({ product, index, changeIndex, styles }) => {
     height: "auto",
     objectFit: "cover",
     maxHeight: "75vh",
+    border: "1px solid black",
+    borderRadius: "5",
   };
 
   const children = styles?.photos?.map((photo, index) => {
     return (
       <img
         name={product.name}
-        width={500}
-        height={600}
+        width={300}
+        height={400}
         onClick={(e) =>
           logInteraction(
             `main-image: ${e.target.name}-${imageStyle}`,
@@ -33,7 +35,7 @@ const Carousel = ({ product, index, changeIndex, styles }) => {
   });
 
   return (
-    <div style={{ padding: `0 ${chevronWidth}px` }}>
+    <div style={{ padding: `10px ${chevronWidth}px` }}>
       <ItemsCarousel
         className="gallery-carousel"
         requestToChangeActive={changeIndex}
