@@ -35,7 +35,7 @@ h4,
 h5 {
   margin: 0;
   padding: 0;
-  font-family: "VarelaRound";
+  font-family: "Cardo", serif;
 }
 
 #overall-container {
@@ -85,7 +85,7 @@ h5 {
   margin: 2% auto 0 auto;
   grid-area: 2 / 1 / 3 / 3;
   display: flex;
-  height: 80vh;
+  height: 70vh;
   flex-flow: row;
   width: 80vw;
 }
@@ -169,6 +169,7 @@ h5 {
   font-size: 1.5rem;
   padding-left: 1rem;
   margin-left: 2rem;
+  font-family: "Cardo", serif;
 }
 
 .social-media-icons {
@@ -525,7 +526,7 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 .read-all-scroll {
   text-decoration: underline;
@@ -603,11 +604,13 @@ p {
 }
 .product-description {
   width: 45vw;
+  font-size: 1.2rem;
 }
 .product-features-list {
   margin-left: 1rem;
   border-left: 1px #525252 solid;
   font-size: 1rem;
+  font-family: "Cardo", serif;
 }
 
 /* Related Products */
@@ -695,12 +698,14 @@ p {
   margin: 0px;
   display: inline-block;
   font-size: 1.2vw;
+  font-family: "Cardo", serif;
 }
 
 .product-category,
 .product-price {
   margin-top: 10px;
   font-size: 1.1vw;
+  font-family: "Cardo", serif;
 }
 
 .product-image-container {
@@ -1244,7 +1249,7 @@ tr th {
   } */
 
   #overview-body-image img {
-    min-height: 400px;
+    min-height: 1200px;
     height: 100%;
     object-fit: cover;
     max-width: 100%;
@@ -1348,11 +1353,12 @@ tr th {
   margin-right: 2%;
   width: 14vw;
   height: 8vh;
-  font-size: 1em;
+  font-size: 1.3em;
   background-color: #f2f2f2;
   border-radius: 3px;
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
-  font-weight: bold;
+  font-weight: bolder;
+  font-family: "Cardo", serif;
 }
 
 .QAlist_askButton:hover {
@@ -1364,6 +1370,7 @@ tr th {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  font-family: "Cardo", serif;
 }
 
 .QAlist_sortButton {
@@ -1409,6 +1416,7 @@ tr th {
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
   margin-bottom: 1%;
   width: 60%;
+  font-family: "Cardo", serif;
 }
 
 .QAqentries_metaContainer {
@@ -1434,18 +1442,21 @@ tr th {
   border-radius: 3px;
   width: 90%;
   margin: auto;
+  font-family: "Cardo", serif;
 }
 
 .QAqentries_questionBody {
   font-size: 1.1rem;
+  font-family: "Cardo", serif;
 }
 
 .QAqentries_questionSubtext {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .QAqentries_questionLabel {
   width: 6vw;
+  font-family: "Cardo", serif;
 }
 .QAqentries_questionContainer {
   flex: 1 1 auto;
@@ -1545,7 +1556,7 @@ tr th {
 }
 
 .QAaentries_meta {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .QAaentries_answerBodyContainer {
@@ -1558,7 +1569,7 @@ tr th {
   font-size: 1.1rem;
 }
 .QAaentries_answerSubtext {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 .QAaentries_answerLabel {
   width: 5vw;
@@ -1607,6 +1618,7 @@ tr th {
 
 .QAsearch_subtext {
   margin-bottom: 1%;
+  font-family: "Cardo", serif;
 }
 
 .QAsearch_bar {
@@ -1629,6 +1641,7 @@ tr th {
 
 .QAqmodal {
   /* background-color: rgb(136, 152, 245); */
+  font-family: "Cardo", serif;
 }
 
 .QAqmodal_title {
@@ -1656,6 +1669,7 @@ tr th {
 
 /* QA-AnswerModal Styling */
 .QAamodal {
+  font-family: "Cardo", serif;
 }
 
 .QAamodal_title {
@@ -1691,6 +1705,12 @@ tr th {
   justify-content: center;
   align-items: center;
 }
+.QAamodal_submitButtonContainer {
+  margin-top: 2%;
+  margin-right: 32%;
+  display: flex;
+  justify-content: flex-end;
+}
 .QAqmodal_submitButton {
   margin-top: 2%;
   margin-right: 25%;
@@ -1702,6 +1722,7 @@ tr th {
 .QAimage {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 3%;
 }
 
 .QAimage_thumbnail {
@@ -1715,7 +1736,7 @@ tr th {
 }
 
 [class^="ReactModal"] {
-  width: 70% !important;
+  width: 65% !important;
   height: 80% !important;
   margin: auto !important;
 }

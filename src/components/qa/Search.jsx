@@ -42,7 +42,7 @@ const Search = ({ questions }) => {
             return (
               <>
                 <div className="QAsearchResults">
-                  <div className="QAsearchResult">
+                  <div className="QAsearchResultItem">
                     <b>Match Found:</b> {result.item.question_body}
                   </div>
                 </div>

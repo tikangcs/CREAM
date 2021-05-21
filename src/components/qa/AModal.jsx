@@ -137,14 +137,16 @@ let AnswerModal = function ({
             ></input>
           </div>
         </label>
-        <button
-          className="QAamodal_submitButton"
-          type="button"
-          onClick={updateAnswerArrayClickHandler}
-          id="answerModalSubmitButton"
-        >
-          Submit
-        </button>
+        <div className="QAamodal_submitButtonContainer">
+          <button
+            className="QAamodal_submitButton"
+            type="button"
+            onClick={updateAnswerArrayClickHandler}
+            id="answerModalSubmitButton"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

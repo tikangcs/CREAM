@@ -9,7 +9,6 @@ var mapStoreToProps = () => ({
 
 var mapDispatchToProps = (dispatch) => ({
   handleHelpfulLog: (reviewId) => {
-    console.log(dispatch);
     dispatch(sendReviewHelpfulLog(reviewId));
   },
 });
