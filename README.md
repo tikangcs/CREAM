@@ -4,6 +4,14 @@ The challenge of this project was to improve an existing web app by adding new s
 
 [Link to the final product](http://18.225.11.209:3000/#11109)
 
+
+## Technologies Featured
+- Javascript
+- HTML / CSS
+- React
+- Redux
+- Axios
+
 ## Improvement #1 - Addition of a Questions and Answers section
 
 This section allows asking and answering of questions for a selected product. The functionality contained within this section was divided into the following:
