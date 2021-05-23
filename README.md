@@ -1,6 +1,6 @@
 # CREAM
 ## Overview
-The challenge of this project was to improve an existing web app by adding new significant features and through other marginal refinements
+The challenge of this project was to improve an existing web app by adding new significant features and other marginal refinements
 
 [Link to the final product](http://18.225.11.209:3000/#11109)
 
