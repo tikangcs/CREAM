@@ -64,22 +64,15 @@ let QEntries = function ({ body, asker, date, answers, product }) {
           <div className="QAqentries_questionLabel">Question:</div>
           <div className="QAqentries_questionContainer">
             <div className="QAqentries_questionBody">{body}</div>
-            <div className="QAqentries_questionSubtext">
-              By {asker} on{" "}
-              {new Date(date).toLocaleString("default", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </div>
             <div className="QAqentries_metaContainer">
-              <a
-                className="QAqentries_meta"
-                href="#"
-                onClick={aModalClickHandler}
-              >
-                Add an answer
-              </a>
+              <div className="QAqentries_questionSubtext">
+                {new Date(date).toLocaleString("default", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })}{" "}
+                by {asker}
+              </div>
               <a
                 className="QAqentries_meta"
                 href="void(0)"
@@ -94,15 +87,27 @@ let QEntries = function ({ body, asker, date, answers, product }) {
               >
                 {markedQReported ? "Reported!" : "Report"}
               </a>
-              <span
-                className="QAqentries_questionCollpase"
-                onClick={hideAnswersClickHandler}
-              >
-                <img
-                  src="https://img.icons8.com/ultraviolet/20/000000/expand-arrow--v1.png"
-                  style={{ height: "100%", width: "100%" }}
-                />
-              </span>
+              {isHidden ? (
+                <span
+                  className="QAqentries_questionCollpase"
+                  onClick={hideAnswersClickHandler}
+                >
+                  <img
+                    src="https://img.icons8.com/ultraviolet/20/000000/expand-arrow--v1.png"
+                    style={{ height: "100%", width: "100%" }}
+                  />
+                </span>
+              ) : (
+                <span
+                  className="QAqentries_questionCollpase"
+                  onClick={hideAnswersClickHandler}
+                >
+                  <img
+                    src="https://img.icons8.com/ultraviolet/20/000000/collapse-arrow.png"
+                    style={{ height: "100%", width: "100%" }}
+                  />
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -120,39 +125,61 @@ let QEntries = function ({ body, asker, date, answers, product }) {
                 />
               );
             })}
-            <div className="QAqentries_loadButtonsContainer">
-              {isFullyLoaded ? (
-                <div className="QAqentries_collapse">
-                  <span className="QAqentries_displayCount"></span>
-                  <button
-                    className="QAqentries_collapseButton"
-                    type="button"
-                    onClick={collapseClickHandler}
-                  >
-                    Collapse answers
-                  </button>
-                </div>
-              ) : arrayOfAnswers.length > 2 ? (
-                <div className="QAqentries_loadMore">
-                  <div className="QAqentries_displayButtons">
-                    <button
-                      className="QAqentries_loadButton"
-                      type="button"
-                      value={displayedIndex}
-                      onClick={loadClickHandler}
-                    >
-                      See more answers
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <div className="QAqentries_loadMore">
-                  <div className="QAqentries_displayCount"></div>
-                </div>
-              )}
-            </div>
           </div>
         )}
+        <div className="QAqentries_loadButtonsContainer">
+          <a className="QAqentries_meta" href="#" onClick={aModalClickHandler}>
+            Add an answer
+          </a>
+          {isFullyLoaded ? (
+            <div className="QAqentries_loadMore">
+              <div className="QAqentries_displayButtons">
+                <span className="QAqentries_displayCount"></span>
+                <img
+                  src="https://img.icons8.com/android/12/000000/collapse-arrow.png"
+                  style={{ marginRight: "2%" }}
+                />
+                <a
+                  className="QAqentries_collapseButton"
+                  type="button"
+                  onClick={collapseClickHandler}
+                >
+                  Collapse Answers
+                </a>
+                <img
+                  src="https://img.icons8.com/android/12/000000/collapse-arrow.png"
+                  style={{ marginLeft: "2%" }}
+                />
+              </div>
+            </div>
+          ) : arrayOfAnswers.length > 2 ? (
+            <div className="QAqentries_loadMore">
+              <div className="QAqentries_displayButtons">
+                <img
+                  src="https://img.icons8.com/android/12/000000/expand-arrow.png"
+                  style={{ marginRight: "2%" }}
+                />
+                <a
+                  className="QAqentries_loadButton"
+                  type="button"
+                  value={displayedIndex}
+                  onClick={loadClickHandler}
+                >
+                  Show {arrayOfAnswers.length - displayedAnswers.length} more
+                  answers
+                </a>
+                <img
+                  src="https://img.icons8.com/android/12/000000/expand-arrow.png"
+                  style={{ marginLeft: "2%" }}
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="QAqentries_loadMore">
+              <div className="QAqentries_displayCount"></div>
+            </div>
+          )}
+        </div>
       </div>
 
       {showAModal ? (

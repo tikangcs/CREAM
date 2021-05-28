@@ -1,5 +1,6 @@
 const webpack = require("webpack");
-const OtpmizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require("path");
 const SRC_DIR = path.resolve(__dirname, "src");
 const DIST_DIR = path.resolve(__dirname, "dist");
@@ -18,8 +19,8 @@ module.exports = {
         exclude: [/node_modules/, `${SRC_DIR}/redux.example/`],
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+        test: /\.s?css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
@@ -31,5 +32,9 @@ module.exports = {
   },
   devServer: {
     contentBase: "./dist",
+  },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+    minimize: true,
   },
 };
