@@ -25,16 +25,18 @@ let AnswerEntries = ({ responder, body, date, images }) => {
     <>
       <div className="QAaentries">
         <div className="QAaentries_answerBodyContainer">
-          <div className="QAaentries_answerLabel">Answer:</div>
-          <div className="QAaentries_answerContainer">
-            <div className="QAaentries_answer">{body}</div>
-            <div className="QAaentries_answerSubtext">
-              By {responder} on{" "}
-              {new Date(date).toLocaleString("default", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              })}
+          <div className="QAaentries_answer">
+            <div className="QAaentries_answerLabel">Answer:</div>
+            <div className="QAaentries_answerContainer">
+              <div className="QAaentries_answer">{body}</div>
+              <div className="QAaentries_answerSubtext">
+                By {responder} on{" "}
+                {new Date(date).toLocaleString("default", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </div>
             </div>
             {images.length ? (
               <div className="QAaentries_imagesContainer">

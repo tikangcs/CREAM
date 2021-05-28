@@ -13,7 +13,6 @@ const Search = ({ questions }) => {
   };
   const fuse = new Fuse(questions, options);
   const results = fuse.search(query);
-  console.log("QASearch", results);
   const sayHello = () => {};
   const searchChangeHandler = (e) => {
     setQuery(e.target.value);

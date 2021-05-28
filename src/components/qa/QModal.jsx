@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactModal from "react-modal";
 
 let QuestionModal = function ({ showQModal, setShowQModal, productName }) {
   //VARIABLES
@@ -23,7 +22,9 @@ let QuestionModal = function ({ showQModal, setShowQModal, productName }) {
   return (
     <>
       <div className="QAqmodal">
-        <span className="closeButton" onClick={closeQModalClickHandler}></span>
+        <span className="closeButton" onClick={closeQModalClickHandler}>
+          x
+        </span>
         <h3 className="QAqmodal_title">Ask Your Question</h3>
         <h5 className="QAqmodal_subtitle">About the {productName}</h5>
         <div className="QAqmodal_subscript">

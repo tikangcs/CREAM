@@ -48,7 +48,7 @@ const List = ({ product, questions }) => {
           Questions 1-{displayedQIndex} of {questions.length}
         </div>
         <div className="QAlist_sortContainer">
-          <div>
+          <div className="QAlist_sortLabel">
             <b>{`Sort: `}</b>
           </div>
           <select className="QAlist_sortButton">

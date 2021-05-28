@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "VarelaRound";
-  src: url("fonts/Varela_Round/VarelaRound-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
 ul {
   list-style: none;
   padding: 1rem;
@@ -24,7 +12,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "VarelaRound";
+  font-family: "Cardo", serif;
 }
 
 p,
@@ -35,7 +23,6 @@ h4,
 h5 {
   margin: 0;
   padding: 0;
-  font-family: "Cardo", serif;
 }
 
 #overall-container {
@@ -59,7 +46,6 @@ h5 {
 }
 
 #slogan {
-  font-family: "Montserrat";
   position: absolute;
   z-index: 1;
   top: 28%;
@@ -85,7 +71,7 @@ h5 {
   margin: 2% auto 0 auto;
   grid-area: 2 / 1 / 3 / 3;
   display: flex;
-  height: 70vh;
+  height: 75vh;
   flex-flow: row;
   width: 80vw;
 }
@@ -104,7 +90,7 @@ h5 {
 #overview-body-image {
   position: relative;
   width: 60%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
   text-align: center;
   justify-content: center;
@@ -169,7 +155,6 @@ h5 {
   font-size: 1.5rem;
   padding-left: 1rem;
   margin-left: 2rem;
-  font-family: "Cardo", serif;
 }
 
 .social-media-icons {
@@ -281,7 +266,7 @@ h5 {
 .logo {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .logo:hover {
@@ -610,7 +595,6 @@ p {
   margin-left: 1rem;
   border-left: 1px #525252 solid;
   font-size: 1rem;
-  font-family: "Cardo", serif;
 }
 
 /* Related Products */
@@ -698,14 +682,12 @@ p {
   margin: 0px;
   display: inline-block;
   font-size: 1.2vw;
-  font-family: "Cardo", serif;
 }
 
 .product-category,
 .product-price {
   margin-top: 10px;
   font-size: 1.1vw;
-  font-family: "Cardo", serif;
 }
 
 .product-image-container {
@@ -1358,7 +1340,6 @@ tr th {
   border-radius: 3px;
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
   font-weight: bolder;
-  font-family: "Cardo", serif;
 }
 
 .QAlist_askButton:hover {
@@ -1367,10 +1348,12 @@ tr th {
 
 .QAlist_sortContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Cardo", serif;
+
+  align-items: space-evenly;
+}
+
+.QAlist_sortLabel {
+  margin-right: %;
 }
 
 .QAlist_sortButton {
@@ -1416,7 +1399,6 @@ tr th {
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
   margin-bottom: 1%;
   width: 60%;
-  font-family: "Cardo", serif;
 }
 
 .QAqentries_metaContainer {
@@ -1442,12 +1424,10 @@ tr th {
   border-radius: 3px;
   width: 90%;
   margin: auto;
-  font-family: "Cardo", serif;
 }
 
 .QAqentries_questionBody {
   font-size: 1.1rem;
-  font-family: "Cardo", serif;
 }
 
 .QAqentries_questionSubtext {
@@ -1456,7 +1436,6 @@ tr th {
 
 .QAqentries_questionLabel {
   width: 6vw;
-  font-family: "Cardo", serif;
 }
 .QAqentries_questionContainer {
   flex: 1 1 auto;
@@ -1483,6 +1462,20 @@ tr th {
 .QAqentries_displayCount {
   text-align: center;
   padding-bottom: 10px;
+}
+
+.QAqentries_collapse {
+  display: flex;
+  justify-content: center;
+}
+
+.QAqentries_collapseButton {
+  background-color: #f2f2f2;
+  justify-content: center;
+}
+
+.QAqentries_collapseButton:hover {
+  opacity: 0.7;
 }
 
 .QAqentries_loadButton {
@@ -1529,11 +1522,12 @@ tr th {
 
 .QAaentries_collapse {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .QAaentries_collapseButton {
   background-color: #f2f2f2;
+  justify-content: center;
 }
 
 .QAaentries_collapseButton:hover {
@@ -1603,10 +1597,10 @@ tr th {
 }
 
 .QAaentries_imageModal {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  display: flex;
+  align-items: center;
+  margin: auto auto;
+  width: 100%;
 }
 
 .QAsearch {
@@ -1618,7 +1612,6 @@ tr th {
 
 .QAsearch_subtext {
   margin-bottom: 1%;
-  font-family: "Cardo", serif;
 }
 
 .QAsearch_bar {
@@ -1641,7 +1634,6 @@ tr th {
 
 .QAqmodal {
   /* background-color: rgb(136, 152, 245); */
-  font-family: "Cardo", serif;
 }
 
 .QAqmodal_title {
@@ -1669,7 +1661,6 @@ tr th {
 
 /* QA-AnswerModal Styling */
 .QAamodal {
-  font-family: "Cardo", serif;
 }
 
 .QAamodal_title {
@@ -1737,6 +1728,6 @@ tr th {
 
 [class^="ReactModal"] {
   width: 65% !important;
-  height: 80% !important;
+  height: 77% !important;
   margin: auto !important;
 }

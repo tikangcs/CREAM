@@ -7,9 +7,7 @@ import SocialMediaIcons from "./overview/SocialMediaIcons.js";
 import MainPageContainer from "../containers/overview/MainPageContainer";
 
 var App = ({ viewMainPage }) => {
-  useEffect(() => {
-    console.log(viewMainPage);
-  }, [viewMainPage]);
+  useEffect(() => {}, [viewMainPage]);
 
   return (
     <Fragment>

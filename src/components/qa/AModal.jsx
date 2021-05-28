@@ -84,6 +84,7 @@ let AnswerModal = function ({
           Display name*
           <input
             className="QAamodal_inputfield"
+            id="responderDisplayName"
             type="text"
             size="50"
             maxlenght="60"

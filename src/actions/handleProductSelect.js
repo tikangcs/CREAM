@@ -28,7 +28,6 @@ var handleProductSelect = (productId) => {
       .get(`/products/${productId}`)
       .then(({ data }) => {
         dispatch(setProduct(data));
-        console.log(window.location);
       })
       .then(() => {
         dispatch(fetchRelated(dispatch));

@@ -82,14 +82,14 @@ let QEntries = function ({ body, asker, date, answers, product }) {
               </a>
               <a
                 className="QAqentries_meta"
-                href="#"
+                href="void(0)"
                 onClick={toggleQHelpfulClickHandler}
               >
                 {markedQHelpful ? "Helpful!" : "Mark as Helpful"}
               </a>
               <a
                 className="QAqentries_meta"
-                href="#"
+                href="void(0)"
                 onClick={toggleQReportedClickHandler}
               >
                 {markedQReported ? "Reported!" : "Report"}
@@ -98,7 +98,10 @@ let QEntries = function ({ body, asker, date, answers, product }) {
                 className="QAqentries_questionCollpase"
                 onClick={hideAnswersClickHandler}
               >
-                <img src="https://img.icons8.com/ultraviolet/20/000000/expand-arrow--v1.png" />
+                <img
+                  src="https://img.icons8.com/ultraviolet/20/000000/expand-arrow--v1.png"
+                  style={{ height: "100%", width: "100%" }}
+                />
               </span>
             </div>
           </div>
@@ -109,13 +112,10 @@ let QEntries = function ({ body, asker, date, answers, product }) {
             {displayedAnswers.map((answer, i) => {
               return (
                 <AnswerEntries
-                  index={i}
                   responder={answer.answerer_name}
                   body={answer.body}
                   date={answer.date}
-                  helpfulCount={answer.helpfulness}
                   images={answer.photos}
-                  aCount={arrayOfAnswers.length}
                   key={answer.id}
                 />
               );
@@ -165,12 +165,13 @@ let QEntries = function ({ body, asker, date, answers, product }) {
             arrayOfAnswers={arrayOfAnswers}
             setArrayOfAnswers={setArrayOfAnswers}
             setShowAModal={setShowAModal}
-            productName={product.name} //ACTION: pass down prop when refactored
+            productName={product.name}
             displayedAnswers={displayedAnswers}
             body={body}
           />
         </ReactModal>
       ) : null}
+      <></>
     </>
   );
 };
