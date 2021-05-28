@@ -1,11 +1,23 @@
 # CREAM
 ## Overview
-The challenge of this project was to improve an existing web app by adding new significant features and through other marginal refinements
+The challenge of this project was to improve upon the front end of an existing web app. This involved two main processes:
+1. Adding a new Questions and Answers section with a number of features
+2. Cosmetic refinements throughout the entire app
 
-[Link to the final product](https://github.com/The-Backers/FEC)
+### Links
+- [Improved web app](http://18.225.11.209:3000/#11109)
+- [Original web app](https://github.com/The-Backers/FEC) (Credit to the Backers for their inital work on the web app)
 
-## Improvement #1 - Addition of a Questions and Answers section
+## Technologies Featured
+- Javascript
+- HTML / CSS
+- React
+- Redux
+- Axios
 
+## Improvements
+
+### #1 - Addition of a Questions and Answers section
 This section allows asking and answering of questions for a selected product. The functionality contained within this section was divided into the following:
 - View questions and answers
 - Search for a question
@@ -37,13 +49,9 @@ Within each question card, a 'Add an answer' button is positioned inline with th
 
 <img src="documentation/AnswerModal.png" width="80%" height="50%">
 
-## Improvement #2 - Cosmetic refinements
+### #2 - Cosmetic refinements
 In addition to adding a brand new section, the goal of this project was to touch up the inherited web app into a more cohesive, consistent and visually alluring product for a better user experience. This meant that the primary focus involved making sweeping cosmetic changes where necessary. Much of the work involved heavy usage of the various CSS techniques such as CSS box model, flex and grid. There was a minimal amount of code refactoring and the functionality of the original sections largely remain untouched.
 
 <img src="documentation/ProductsScreen.png" width="80%" height="80%">
 <img src="documentation/RelatedScreen.png" width="80%" height="80%">
 <img src="documentation/ReviewsScreen.png" width="80%" height="80%">
-
-## Credits
-Credit to the Backers for their inital work 
-- [Link to their original repo](https://github.com/The-Backers/FEC)
