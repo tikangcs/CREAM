@@ -5,7 +5,7 @@ The challenge of this project was to improve upon the front end of an existing w
 2. Cosmetic refinements throughout the entire app
 
 ### Links
-- [Improved web app](http://18.225.11.209:3000/#11109)
+- [Improved web app](http://3.15.172.126:3000/#11109)
 - [Original web app](https://github.com/The-Backers/FEC) (Credit to the Backers for their inital work on the web app)
 
 ## Technologies Featured
