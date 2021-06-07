@@ -4,10 +4,6 @@ The challenge of this project was to improve upon the front end of an existing w
 1. Adding a new Questions and Answers section with a number of features
 2. Cosmetic refinements throughout the entire app
 
-### Links
-- [Improved web app](http://3.15.172.126:3000/#11109)
-- [Original web app](https://github.com/The-Backers/FEC) (Credit to the Backers for their inital work on the web app)
-
 ## Technologies Featured
 - Javascript
 - HTML / CSS
@@ -55,3 +51,7 @@ In addition to adding a brand new section, the goal of this project was to touch
 <img src="documentation/ProductsScreen.png" width="80%" height="80%">
 <img src="documentation/RelatedScreen.png" width="80%" height="80%">
 <img src="documentation/ReviewsScreen.png" width="80%" height="80%">
+
+## Links
+- [Improved web app](http://3.15.172.126:3000/#11109)
+- [Original web app](https://github.com/The-Backers/FEC) (Credit to the Backers for their inital work on the web app)
