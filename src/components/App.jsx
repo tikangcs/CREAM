@@ -15,13 +15,19 @@ var App = ({ viewMainPage }) => {
         <MainPageContainer />
       ) : (
         <div id="overall-container">
+          <div className="saleBanner">
+            <div>
+              <b>SUMMER SALE</b> - UP TO <b>75% OFF</b> | <b>FREE</b> SHIPPING
+              ON ORDERS $75+ | <b>FREE</b> PICKUP IN STORE
+            </div>
+          </div>
           <OverviewContainer />
-          <OutfitsContainer async />
-          <ReviewsContainer />
-          <QAContainer />
+          {/* <OutfitsContainer async />
+            <ReviewsContainer />
+            <QAContainer /> */}
+          <SocialMediaIcons />
         </div>
       )}
-      <SocialMediaIcons />
     </Fragment>
   );
 };
