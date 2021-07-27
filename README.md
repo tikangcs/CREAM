@@ -13,7 +13,7 @@ The challenge of this project was to improve upon the front end of an existing w
 
 ## Improvements
 
-### #1 - Addition of a Questions and Answers section
+### #1 - Questions and Answers section
 This section allows asking and answering of questions for a selected product. The functionality contained within this section was divided into the following:
 - View questions and answers
 - Search for a question
